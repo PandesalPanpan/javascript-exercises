@@ -1,18 +1,5 @@
 const removeFromArray = function(array, ...elementsToRemove) {
-    // Check if elementToRemove exists in the array
-    let result = new Array();
-    return array.filter((element) => 
-    {
-        for (const elementToRemove of elementsToRemove)
-        {
-            if (element === elementToRemove)
-            {
-                return false;
-            }
-        }
-        return true;
-    });
-    
+    return array.filter(val => !elementsToRemove.includes(val))
 };
 
 // Do not edit below this line
